@@ -1,75 +1,76 @@
 # Flasgger
-## Easy Swagger UI for your Flask API
+## Flask API的Easy Swagger UI
 
-[![Build Status](https://travis-ci.com/flasgger/flasgger.svg?branch=master)](https://travis-ci.com/flasgger/flasgger)
-[![Code Health](https://landscape.io/github/rochacbruno/flasgger/master/landscape.svg?style=flat)](https://landscape.io/github/rochacbruno/flasgger/master)
-[![Coverage Status](https://coveralls.io/repos/github/rochacbruno/flasgger/badge.svg?branch=master)](https://coveralls.io/github/rochacbruno/flasgger?branch=master)
+[![构建状态](https://travis-ci.com/flasgger/flasgger.svg?branch=master)](https://travis-ci.com/flasgger/flasgger)
+[![代码健康](https://landscape.io/github/rochacbruno/flasgger/master/landscape.svg?style=flat)](https://landscape.io/github/rochacbruno/flasgger/master)
+[![测试覆盖状态](https://coveralls.io/repos/github/rochacbruno/flasgger/badge.svg?branch=master)](https://coveralls.io/github/rochacbruno/flasgger?branch=master)
 [![PyPI](https://img.shields.io/pypi/v/flasgger.svg)](https://pypi.python.org/pypi/flasgger)
- <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=rochacbruno%40gmail%2ecom&amp;lc=BR&amp;item_name=Flasgger&amp;no_note=0&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHostedGuest"><img alt='Donate with Paypal' src='http://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif' /></a>
+ <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=rochacbruno%40gmail%2ecom&amp;lc=BR&amp;item_name=Flasgger&amp;no_note=0&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHostedGuest"><img alt='通过Paypal捐助' src='http://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif' /></a>
 
 
 ![flasgger](docs/flasgger.png)
 
-Flasgger is a Flask extension to **extract [OpenAPI-Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#operation-object)** from all Flask views registered in your API.
+Flasgger是一个Flask扩展，可从您的API中所有已注册的Flask视图中**提取[OpenAPI-Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#operation-object)**（以下简称"spec"）。
 
-Flasgger also comes with **[SwaggerUI](http://swagger.io/swagger-ui/) embedded** so you can access [http://localhost:5000/apidocs](localhost:5000/apidocs) and visualize and interact with your API resources.
+Flasgger还**集成 [SwaggerUI](http://swagger.io/swagger-ui/)**，因此您可以访问[http://localhost:5000/apidocs](localhost:5000/apidocs)并可视化并与您的API资源进行交互。
 
-Flasgger also **provides validation** of the incoming data, using the same specification it can validates if the data received as as a POST, PUT, PATCH is valid against the schema defined using **YAML**, **Python dictionaries** or **Marshmallow Schemas**.
+Flasgger还使用与可以验证以POST，PUT，PATCH形式接收的数据是否与**YAML**，**Python字典**，**Marshmallow Schema**所定义的spec一致。
 
-Flasgger can work with simple function views or MethodViews using docstring as specification, or using `@swag_from` decorator to get specification from **YAML** or **dict** and also provides **SwaggerView** which can use **Marshmallow Schemas**  as specification.
+Flasgger可以使用简单的函数视图或方法视图（使用docstring作为规范），或使用@swag_from装饰器从**YAML**或**dict**获取spec，还提供可以使用**SwaggerView**调用**Marshmallow Schemas**作为spec。
 
-Flasgger is compatible with `Flask-RESTful` so you can use `Resources` and `swag` specifications together, take a look at [restful example.](examples/restful.py)
+Flasgger与`Flask-RESTful`兼容，因此您可以同时使用`Resources`和`swag` spec，看看[restful示例](examples/restful.py)。
 
-Flasgger also supports `Marshmallow APISpec` as base template for specification, if you are using APISPec from Marshmallow take a look at [apispec example.](examples/apispec_example.py)
+Flasgger还支持将`Marshmallow APISpec`作为规范的spec模板，如果您使用的是Marshmallow的APISPec，请查看[apispec示例](examples/apispec_example.py)。
 
-# Top Contributors
+# 高度参与的贡献者
 
 [![](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/images/0)](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/links/0)[![](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/images/1)](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/links/1)[![](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/images/2)](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/links/2)[![](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/images/3)](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/links/3)[![](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/images/4)](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/links/4)[![](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/images/5)](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/links/5)[![](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/images/6)](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/links/6)[![](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/images/7)](https://sourcerer.io/fame/rochacbruno/rochacbruno/flasgger/links/7)
 
-# Examples and demo app
+# 示例和演示应用
 
-There are some [example applications](examples/) and you can also play with examples in [Flasgger demo app](http://flasgger.pythonanywhere.com/)
+有一些[示例应用程序](examples/) ，您也可以在[Flasgger演示应用程序](http://flasgger.pythonanywhere.com/)中使用示例。
 
-> NOTE: all the examples apps are also test cases and run automatically in Travis CI to ensure quality and coverage.
+> 注意：所有示例应用程序也是测试用例，并在Travis CI中自动运行以确保质量和测试覆盖范围。
 
 ## Docker
 
-The examples and demo app can also be built and run as a Docker image/container:
+示例和演示应用程序也可以作为Docker映像/容器构建和运行：
 
 ```
 docker build -t flasgger .
 docker run -it --rm -p 5000:5000 --name flasgger flasgger
 ```
-Then access the Flasgger demo app at http://localhost:5000 .
+然后访问位于 http://localhost:5000 的Flasgger演示应用程序。
 
-# Installation
+# 安装
 
-> under your virtualenv do:
+> 在您的virtualenv下执行以下操作：
 
-Ensure you have latest setuptools
+确保您拥有最新的setuptools
 ```
 pip install -U setuptools
 ```
 
-then
+然后
 
 ```
 pip install flasgger
 ```
 
-or (dev version)
+或（开发版本）
 
 ```
-pip install https://github.com/rochacbruno/flasgger/tarball/master
+pip install https://github.com/flasgger/flasgger/tarball/master
 ```
 
-> NOTE: If you want to use **Marshmallow Schemas** you also need to run `pip install marshmallow apispec`
+> 注意：如果要使用**Marshmallow Schemas**，则还需要运行`pip install marshmallow apispec`。
 
-# Getting started
+# 入门
 
-## Using docstrings as specification
+## 使用文档字符串作为spec
 
-Create a file called for example `colors.py`
+
+创建一个名为`colors.py`的文件
 
 ```python
 from flask import Flask, jsonify
@@ -80,8 +81,8 @@ swagger = Swagger(app)
 
 @app.route('/colors/<palette>/')
 def colors(palette):
-    """Example endpoint returning a list of colors by palette
-    This is using docstrings for specifications.
+    """示例端点按调色板返回颜色列表
+    这是使用文档字符串作为spec。
     ---
     parameters:
       - name: palette
@@ -102,7 +103,7 @@ def colors(palette):
         type: string
     responses:
       200:
-        description: A list of colors (may be filtered by palette)
+        description: 颜色列表（可被调色板过滤）
         schema:
           $ref: '#/definitions/Palette'
         examples:
@@ -122,25 +123,25 @@ def colors(palette):
 app.run(debug=True)
 ```
 
-Now run:
+现在运行：
 
 ```
 python colors.py
 ```
 
-And go to: [http://localhost:5000/apidocs/](http://localhost:5000/apidocs/)
+并转到：[http://localhost:5000/apidocs/](http://localhost:5000/apidocs/)
 
-You should get:
+您应该得到：
 
 ![colors](docs/colors.png)
 
-## Using external YAML files
+## 使用外部YAML文件
 
-Save a new file `colors.yml`
+保存一个新文件`colors.yml`
 
 ```yaml
-Example endpoint returning a list of colors by palette
-In this example the specification is taken from external YAML file
+示例端点按调色板返回颜色列表
+在此示例中，规范取自外部YAML文件
 ---
 parameters:
   - name: palette
@@ -161,7 +162,7 @@ definitions:
     type: string
 responses:
   200:
-    description: A list of colors (may be filtered by palette)
+    description: 颜色列表（可被调色板过滤）
     schema:
       $ref: '#/definitions/Palette'
     examples:
@@ -169,7 +170,7 @@ responses:
 ```
 
 
-lets use the same example changing only the view function.
+让我们使用相同的示例，仅更改视图功能。
 
 ```python
 from flasgger import swag_from
@@ -180,7 +181,7 @@ def colors(palette):
     ...
 ```
 
-If you do not want to use the decorator you can use the docstring `file:` shortcut.
+如果您不想使用装饰器，则可以使用docstring`file:`快捷方式。
 
 ```python
 @app.route('/colors/<palette>/')
@@ -192,9 +193,9 @@ def colors(palette):
 ```
 
 
-## Using dictionaries as raw specs
+## 使用字典作为raw spec
 
-Create a Python dictionary as:
+创建一个Python字典为：
 
 ```python
 specs_dict = {
@@ -230,7 +231,7 @@ specs_dict = {
   },
   "responses": {
     "200": {
-      "description": "A list of colors (may be filtered by palette)",
+      "description": "颜色列表（可被调色板过滤）",
       "schema": {
         "$ref": "#/definitions/Palette"
       },
@@ -246,7 +247,7 @@ specs_dict = {
 }
 ```
 
-Now take the same function and use the dict in the place of YAML file.
+现在为同一个函数使用dict替代YAML文件。
 
 ```python
 @app.route('/colors/<palette>/')
@@ -258,9 +259,9 @@ def colors(palette):
     ...
 ```
 
-## Using Marshmallow Schemas
+## 使用 Marshmallow Schemas
 
-> FIRST: `pip install marshmallow apispec`
+> 首先： `pip install marshmallow apispec`
 
 ```python
 from flask import Flask, jsonify
@@ -287,7 +288,7 @@ class PaletteView(SwaggerView):
     ]
     responses = {
         200: {
-            "description": "A list of colors (may be filtered by palette)",
+            "description": "颜色列表（可被调色板过滤）",
             "schema": Palette
         }
     }
@@ -320,15 +321,15 @@ app.run(debug=True)
 
 ```
 
-> NOTE: take a look at `examples/validation.py` for a more complete example.
+> 注意：请查看`examples/validation.py`，以获得更完整的示例。
 
 
-> NOTE: when catching arguments in path rule always use explicit types, bad: ``/api/<username>`` good: ``/api/<string:username>``
+> 注意：在路径规则(path rule)中捕获参数时，请始终使用显式类型，不可以：``/api/<username>`` 可以：``/api/<string:username>``
 
 
-## Using **Flask RESTful** Resources
+## 使用 **Flask RESTful** 资源 （Resources）
 
-Flasgger is compatible with Flask-RESTful you only need to install `pip install flask-restful` and then:
+Flasgger与Flask-RESTful兼容，您只需要安装`pip install flask-restful`，然后：
 
 ```python
 
@@ -343,8 +344,8 @@ swagger = Swagger(app)
 class Username(Resource):
     def get(self, username):
        """
-       This examples uses FlaskRESTful Resource
-       It works also with swag_from, schemas and spec_dict
+       本示例使用FlaskRESTful资源
+       它也适用于swag_from，schema和spec_dict
        ---
        parameters:
          - in: path
@@ -353,14 +354,14 @@ class Username(Resource):
            required: true
        responses:
          200:
-           description: A single user item
+           description: 单个用户项
            schema:
              id: User
              properties:
                username:
                  type: string
-                 description: The name of the user
-                 default: Steven Wilson
+                 description: 用户名
+                 default: 匿名用户
         """
         return {'username': username}, 200
 
@@ -371,15 +372,15 @@ app.run(debug=True)
 
 ```
 
-## Auto-parsing external YAML docs and `MethodView`s
+## 自动解析外部YAML文档和 `MethodView`s
 
-Flasgger can be configured to auto-parse external YAML API docs.  [Set a `doc_dir`](https://github.com/rochacbruno/flasgger/blob/aaef05c17cc559d01b7436211093463642eb6ae2/examples/parsed_view_func.py#L16) in your `app.config['SWAGGER']` and Swagger will load API docs by looking in `doc_dir` for YAML files stored by endpoint-name and method-name.  For example, `'doc_dir': './examples/docs/'` and a file `./examples/docs/items/get.yml` will provide a Swagger doc for `ItemsView` method `get`.
+可以将Flasgger配置为自动解析外部YAML API文档。在您的 `app.config['SWAGGER']`中设置[Set a `doc_dir`](https://github.com/rochacbruno/flasgger/blob/aaef05c17cc559d01b7436211093463642eb6ae2/examples/parsed_view_func.py#L16)，然后Swagger将加载API文档通过在doc_dir中查找由端点名称和函数名称存储的YAML文件。例如，`'doc_dir': './examples/docs/'`和文件`./examples/docs/items/get.yml`将为`ItemsView`方法`get`提供Swagger文档。
 
-Additionally, when using **Flask RESTful** per above, by passing `parse=True` when constructing `Swagger`, Flasgger will use  `flask_restful.reqparse.RequestParser`, locate all `MethodView`s and parsed and validated data will be stored in `flask.request.parsed_data`.
+另外，当如上使用**Flask RESTful**时，通过在构造`Swagger`时传递`parse=True`，Flasgger将使用`flask_restful.reqparse.RequestParser`，找到所有`MethodView`s，然后将解析和验证的数据存储在flask.request.parsed_data中。
 
-## Handling multiple http methods and routes for a single function
+## 为单个函数处理多个http方法和路由
 
-You can separate specifications by endpoint or methods
+您可以按端点或函数分隔spec
 
 ```python
 from flasgger.utils import swag_from
@@ -395,24 +396,22 @@ def fromfile_decorated(username=None):
     return jsonify({'username': username})
 ```
 
-And the same can be achieved with multiple methods in a `MethodView` or `SwaggerView` by
-registering the `url_rule` many times. Take a look at `examples/example_app`
+同样，可以通过多次注册url_rule实现在同一个`MethodView`或`SwaggerView`中使用多个函数。`examples/example_app`
 
 
-# Use the same data to validate your API POST body.
+# 使用相同的数据来验证API POST主体(body)。
 
-Setting `swag_from`'s _validation_ parameter to `True` will validate incoming data automatically:
+将`swag_from`的`_validation_`参数设置为`True`会自动验证传入的数据：
 
 ```python
 from flasgger import swag_from
 
 @swag_from('defs.yml', validation=True)
 def post():
-    # if not validate returns ValidationError response with status 400
-    # also returns the validation message.
+    # 如果未通过验证，则返回状态为400的ValidationError响应并还返回验证消息。
 ```
 
-Using `swagger.validate` annotation is also possible:
+也可以使用`swagger.validate`注释：
 
 ```python
 from flasgger import Swagger
@@ -424,8 +423,7 @@ def post():
     '''
     file: defs.yml
     '''
-    # if not validate returns ValidationError response with status 400
-    # also returns the validation message.
+    # 如果未通过验证，则返回状态为400的ValidationError响应并还返回验证消息。
 ```
 
 Yet you can call `validate` manually:
@@ -436,32 +434,31 @@ from flasgger import swag_from, validate
 @swag_from('defs.yml')
 def post():
     validate(request.json, 'UserSchema', 'defs.yml')
-    # if not validate returns ValidationError response with status 400
-    # also returns the validation message.
+    # 如果未通过验证，则返回状态为400的ValidationError响应并还返回验证消息。
 ```
 
-It is also possible to define `validation=True` in `SwaggerView` and also use
-`specs_dict` for validation.
+也可以在`SwaggerView`中定义`validation=True`并使用
+`specs_dict`用于验证。
 
-Take a look at `examples/validation.py` for more information.
+请查看`examples/validation.py`了解更多信息。
 
-All validation options can be found at http://json-schema.org/latest/json-schema-validation.html
+所有验证选项均可在 http://json-schema.org/latest/json-schema-validation.html 找到
 
-### Custom validation
+### 自定义验证
 
-By default Flasgger will use [python-jsonschema](https://python-jsonschema.readthedocs.io/en/latest/)
-to perform validation.
+默认情况下，Flasgger将使用[python-jsonschema](https://python-jsonschema.readthedocs.io/en/latest/)
+执行验证。
 
-Custom validation functions are supported as long as they meet the requirements:
- - take two, and only two, positional arguments:
-    - the data to be validated as the first; and
-    - the schema to validate against as the second argument
- - raise any kind of exception when validation fails.
+只要满足要求，就支持自定义验证功能：
+ - 仅接受两个位置参数：
+    - 首先要验证的数据；和
+    - 作为第二个参数验证的schema 
+ - 验证失败时引发任何形式的异常。
 
-Any return value is discarded.
+任何返回值都将被丢弃。
 
 
-Providing the function to the Swagger instance will make it the default:
+向Swagger实例提供函数将使其成为默认值：
 
 ```python
 from flasgger import Swagger
@@ -469,10 +466,9 @@ from flasgger import Swagger
 swagger = Swagger(app, validation_function=my_validation_function)
 ```
 
-Providing the function as parameter of `swag_from` or `swagger.validate`
-annotations or directly to the `validate` function will force it's use
-over the default validation function for Swagger:
-
+提供函数作为`swag_from`或`swagger.validate`的参数
+批注或直接添加到`validate`函数将强制使用它
+而不是Swagger的默认验证功能：
 ```python
 from flasgger import swag_from
 
@@ -498,31 +494,29 @@ from flasgger import validate
         request.json, 'Pet', 'defs.yml', validation_function=my_function)
 ```
 
-### Validation Error handling
+### 验证错误处理
 
-By default Flasgger will handle validation errors by aborting the
-request with a 400 BAD REQUEST response with the error message.
+默认情况下，Flasgger处理验证错误的方式是中止请求(abort)并返回
+带有错误消息的400 BAD REQUEST响应。
 
-A custom validation error handling function can be provided to
-supersede default behavior as long as it meets the requirements:
- - take three, and only three, positional arguments:
-    - the error raised as the first;
-    - the data which failed validation as the second; and
-    - the schema used in to validate as the third argument
+可以提供自定义验证错误处理函数(custom validation error handling function) 
+只要符合要求，就会取代默认行为：
+ - 接受三个且仅三个位置参数：
+    - 抛出的error 
+    - 造成验证失败的数据；和
+    - 用于验证的schema 
 
 
-Providing the function to the Swagger instance will make it the default:
+向Swagger实例提供函数将使其成为默认值：
 
 ```python
 from flasgger import Swagger
 
 swagger = Swagger(app, validation_error_handler=my_handler)
 ```
-
-Providing the function as parameter of `swag_from` or `swagger.validate`
-annotations or directly to the `validate` function will force it's use
-over the default validation function for Swagger:
-
+提供这个函数作为`swag_from`或`swagger.validate`批注的参数
+或直接添加到`validate`函数都将强制使用它
+而不是Swagger的默认验证功能：
 ```python
 from flasgger import swag_from
 
@@ -550,14 +544,14 @@ from flasgger import validate
         validation_error_handler=my_handler)
 ```
 
-Examples of use of a custom validation error handler function can be
-found at [example validation_error_handler.py](examples/validation_error_handler.py)
+使用自定义验证错误处理函数的应用示例：
+见 [example validation_error_handler.py](examples/validation_error_handler.py)
 
-# Get defined schemas as python dictionaries
+# 获取已定义的schema作为python词
 
-You may wish to use schemas you defined in your Swagger specs as dictionaries
-without replicating the specification. For that you can use the `get_schema`
-method:
+您可能希望不复制spec而将在Swagger spec中定义schemas用作字典。
+为此，您可以使用`get_schema`
+函数：
 
 ```python
 from flask import Flask, jsonify
@@ -600,14 +594,14 @@ def post():
 product_schema = swagger.get_schema('product')
 ```
 
-This method returns a dictionary which contains the Flasgger schema id,
-all defined parameters and a list of required parameters.
+此方法返回包含Flasgger schema id的字典，
+所有定义的参数和所需参数的列表。
 
-# HTML sanitizer
+# HTML清理器(HTML sanitizer)
 
-By default Flasgger will try to sanitize the content in YAML definitions
-replacing every ```\n``` with ```<br>``` but you can change this behaviour
-setting another kind of sanitizer.
+默认情况下，Flasgger将尝试清理YAML定义中的内容
+用```<br>```替换每个`\n`，但是您可以更改此行为
+设置另一种清理器。
 
 ```python
 from flasgger import Swagger, NO_SANITIZER
@@ -616,24 +610,23 @@ app =Flask()
 swagger = Swagger(app, sanitizer=NO_SANITIZER)
 ```
 
-You can write your own sanitizer
+您可以自行编写清理器
 
 ```python
 swagger = Swagger(app, sanitizer=lambda text: do_anything_with(text))
 ```
 
-There is also a Markdown parser available, if you want to be able to render
-Markdown in your specs description use **MK_SANITIZER**
+如果您希望能够渲染您的specs description中的Markdown，还可以使用Markdown解析器**MK_SANITIZER**
 
 
-# Swagger UI and templates
+# Swagger UI和模板
 
-You can override the `templates/flasgger/index.html` in your application and
-this template will be the `index.html` for SwaggerUI. Use `flasgger/ui2/templates/index.html`
-as base for your customization.
+您可以在应用程序中重写(override) `templates/flasgger/index.html`，
+重写后的模板将为SwaggerUI的`index.html`。使用`flasgger/ui2/templates/index.html`
+作为您自定义`index.html`文件的基础。
 
-Flasgger supports Swagger UI versions 2 and 3, The version 3 is still experimental but you
-can try setting `app.config['SWAGGER']['uiversion']`.
+Flasgger支持Swagger UI版本2和3。版本3仍处于试验阶段，但是您
+可以尝试设置`app.config['SWAGGER']['uiversion']`.
 
 ```python
 app = Flask(__name__)
@@ -645,17 +638,17 @@ swagger = Swagger(app)
 
 ```
 
-# OpenAPI 3.0 Support
+# OpenAPI 3.0支持
 
-There is experimental support for OpenAPI 3.0 that should work when using SwaggerUI 3. To use OpenAPI 3.0, set `app.config['SWAGGER']['openapi']` to a version that the current SwaggerUI 3 supports such as `'3.0.2'`.
+对OpenAPI 3.0的实验性支持应该在使用SwaggerUI 3时起作用。要使用OpenAPI 3.0，请将`app.config['SWAGGER']['openapi']` 设置为当前SwaggerUI 3支持的版本，例如`'3.0.2'`。
 
-For an example of this that uses `callbacks` and `requestBody`, see the [callbacks example](examples/callbacks.py).
+有关使用`callbacks`和`requestBody`的示例，请参见[callbacks example](examples/callbacks.py)。
 
-## Externally loading Swagger UI and jQuery JS/CSS
+## 从外部加载Swagger UI和jQuery JS/CSS
 
-Starting with Flasgger 0.9.2 you can specify external URL locations for loading the JavaScript and CSS for the Swagger and jQuery libraries loaded in the Flasgger default templates.  If the configuration properties below are omitted, Flasgger will serve static versions it includes - these versions may be older than the current Swagger UI v2 or v3 releases.
+从Flasgger 0.9.2开始，您可以指定外部URL位置，以为Flasgger默认模板中加载的Swagger和jQuery库加载JavaScript和CSS。如果省略以下配置属性，则Flasgger将提供它所包含的静态版本-这些版本可能比当前的Swagger UI v2或v3版本要旧。
 
-The following example loads Swagger UI and jQuery versions from unpkg.com:
+以下示例从unpkg.com加载Swagger UI和jQuery版本：
 
 ```
 swagger_config = Swagger.DEFAULT_CONFIG
@@ -668,7 +661,7 @@ Swagger(app, config=swagger_config)
 
 # Initializing Flasgger with default data.
 
-You can start your Swagger spec with any default data providing a template:
+您可以使用默认数据来启动Swagger spec或提供模板：
 
 ```python
 template = {
@@ -702,9 +695,13 @@ And then the template is the default data unless some view changes it. You
 can also provide all your specs as template and have no views. Or views in
 external APP.
 
-## Getting default data at runtime
+然后，除非某些视图更改了模板，否则模板是默认数据。您
+也可以提供所有spec作为模板，而无需包括视图。或
+外部APP中的视图。
 
-Sometimes you need to get some data at runtime depending on dynamic values ex: you want to check `request.is_secure` to decide if `schemes` will be `https` you can do that by using `LazyString`.
+## #在运行时获取默认数据
+
+有时您需要在运行时获取一些数据，具体取决于动态值，例如：要检查`request.is_secure`以确定`schemes`是否为`https`，您可以使用`LazyString`做到这一点。
 
 ```py
 from flask import Flask
@@ -712,7 +709,7 @@ from flasgger import, Swagger, LazyString, LazyJSONEncoder
 
 app = Flask(__init__)
 
-# Set the custom Encoder (Inherit it if you need to customize)
+# 设置自定义编码器（如果需要自定义，则继承它）
 app.json_encoder = LazyJSONEncoder
 
 
@@ -732,11 +729,12 @@ Swagger(app, template=template)
 ```
 
 The `LazyString` values will be evaluated only when `jsonify` encodes the value at runtime, so you have access to Flask `request, session, g, etc..` and also may want to access a database.
+仅当`jsonify`在运行时对该值进行编码时，才会评估`LazyString`的值，因此您可以访问Flask的`request，session，g 等`，或者是访问数据库。
 
-## Behind a reverse proxy
+## 经过反向代理
 
-Sometimes you're serving your swagger docs behind an reverse proxy (e.g. NGINX).  When following the [Flask guidance](http://flask.pocoo.org/snippets/35/),
-the swagger docs will load correctly, but the "Try it Out" button points to the wrong place.  This can be fixed with the following code:
+有时，您是在反向代理（例如NGINX）后面提供庞大的文档。当遵循[Flask指南](http://flask.pocoo.org/snippets/35/)时，
+Swagger的文档将正确加载，但是“尝试一下”按钮指向错误的位置。可以使用以下代码解决此问题：
 
 ```python
 from flask import Flask, request
@@ -750,9 +748,9 @@ swagger = Swagger(app, template=template)
 
 ``` 
 
-# Customize default configurations
+# 自定义默认配置
 
-Custom configurations such as a different specs route or disabling Swagger UI can be provided to Flasgger:
+可以向Flasgger提供自定义配置，例如不同的spec route或禁用Swagger UI：
 
 ```python
 swagger_config = {
@@ -776,9 +774,9 @@ swagger = Swagger(app, config=swagger_config)
 
 ```
 
-## Extracting Definitions
+## 提取定义
 
-Definitions can be extracted when `id` is found in spec, example:
+当在spec中找到`id`时，可以提取定义，例如：
 
 ```python
 from flask import Flask, jsonify
@@ -800,7 +798,7 @@ def colors(palette):
         default: all
     responses:
       200:
-        description: A list of colors (may be filtered by palette)
+        description: 颜色列表（可被调色板过滤）
         schema:
           id: Palette
           type: object
@@ -828,11 +826,11 @@ def colors(palette):
 app.run(debug=True)
 ```
 
-In this example you do not have to pass `definitions` but need to add `id` to
-your schemas.
+在此示例中，您不必传递`definitions`，而是需要将`id`添加到您的schema。
 
-## Python2 Compatibility
+## Python2兼容性
 
-Version `0.9.5.*` will be the last verison that supports Python2. 
-Please direct discussions to [#399](https://github.com/flasgger/flasgger/issues/399). 
+
+版本`0.9.5.*`将是最后一个支持Python2的版本。
+请在这里讨论[#399](https://github.com/flasgger/flasgger/issues/399)。
 
